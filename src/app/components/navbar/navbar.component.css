@@ -1,0 +1,57 @@
+/* Styles generales de barra */
+nav {
+  background-image: radial-gradient(
+    circle,
+    #ffdb6d,
+    #ffbf75,
+    #ffa78c,
+    #ff96a6,
+    #f08fbe
+  );
+  border-radius: 10px;
+  margin: 0.2cm 1cm;
+}
+
+/* Color de fondo lista desplegable "Mas informacion" */
+#ul-custom {
+  background-color: #e4f7d2;
+}
+
+/* Color de fondo de los items de lista desplegable "Mas informacion" al pasar el puntero por encima */
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #212529 !important;
+  background-color: #ff96a6 !important;
+}
+
+/* Styles de botones "Login e Inicio" */
+.button-custom {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: #212529;
+  border-color: #212529;
+  margin: 0 0.5vw; 
+}
+.button-custom:hover,
+.button-custom:focus {
+  color: #212529 !important;
+  background-color: #ffbf75 !important;
+}
+
+/* Color de fondo de los items de la barra al pasar el puntero por encima */
+#li-custom:hover,
+#li-custom:focus {
+  background-color: #ffbf75 !important;
+  border-radius: 10px;
+}
+
+/* Styles de los items de la barra */
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #212529;
+  text-decoration: none;
+}
+.nav-link:hover, .nav-link:focus {
+  color: black;
+}

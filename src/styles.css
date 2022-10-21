@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+#body-custom {
+    background-image: linear-gradient(to top, #ff96a6, #ffad84, #e9cb7a, #bce896, #7fffd4) !important;
+    height: auto !important; 
+    font-family: 'Montserrat', sans-serif !important;
+}
