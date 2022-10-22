@@ -1,0 +1,47 @@
+.section {
+  border-radius: 2vw;
+  margin: 0.2cm 1cm;
+  background-image: radial-gradient(
+    circle,
+    #ffdb6d,
+    #ffbf75,
+    #ffa78c,
+    #ff96a6,
+    #f08fbe
+  );
+}
+
+/* style icono divisor de secciones */
+#icono {
+  border-radius: 1vw;
+  margin: 1cm 1cm 0 1cm;
+}
+
+/* Style avatar de tarjetas de experiencias laborales*/
+.card-custom-avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  width: 5vw;
+  height: 5vw;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style row de experiencias */
+#div-row {
+  margin: 1cm;
+  padding: 0.5cm;
+  justify-content: center;
+}
+
+/* Style div de experiecias */
+.div-exp {
+  max-width: 540px;
+  margin: 0.5vw;
+  background-color: #e4f7d2;
+}
