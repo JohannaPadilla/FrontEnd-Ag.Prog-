@@ -1,0 +1,68 @@
+/* Style del section */
+#section {
+  border-radius: 2vw;
+  margin: 0.2cm 1cm;
+  background-image: radial-gradient(
+    circle,
+    #ffdb6d,
+    #ffbf75,
+    #ffa78c,
+    #ff96a6,
+    #f08fbe
+  );
+}
+
+/* Style Div del columna "Mas informacion" */
+#div-info {
+  margin: 1cm;
+  background-color: #e4f7d2;
+  padding: 0.5cm;
+  border-radius: 10px;
+}
+/* Titulo "Mas informcion */
+#tit-info {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 2vw;
+}
+/* Style de card item de columna "Mas informacion */
+.tarj-info {
+  background-image: linear-gradient(
+    to right,
+    #ff96a6,
+    #ffad84,
+    #e9cb7a,
+    #bce896,
+    #7fffd4
+  );
+  border: 0.1vw solid #e9cb7a;
+}
+/* Style columna items de "Mas informacion" */
+.col-info {
+  margin-top: 0.1cm;
+}
+/* Style letras items columna "Mas informacion" */
+.a-info {
+  text-decoration: none;
+  color: #212529;
+  text-align: left;
+}
+
+/* Style Div "Acerca de mi..." */
+#div-acerca {
+  margin: 1cm;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    50deg,
+    transparent 0%,
+    #e4f7d2 0% 85%,
+    transparent 95%
+  );
+  border-radius: 10px;
+}
+/* Style H1 de "Acerca de mi..." */
+#h1-acerca{
+  margin: 0.5cm 0;
+  text-align: center
+}
