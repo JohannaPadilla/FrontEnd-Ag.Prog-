@@ -1,0 +1,101 @@
+/* Styles de seccion divicion */
+#icono {
+  border-radius: 1vw;
+  margin: 1cm 1cm 0 1cm;
+}
+
+/* Styles section */
+.section {
+  border-radius: 2vw;
+  margin: 0.2cm 1cm;
+  background-image: radial-gradient(
+    circle,
+    #ffdb6d,
+    #ffbf75,
+    #ffa78c,
+    #ff96a6,
+    #f08fbe
+  );
+}
+
+/* Style row de cursos */
+#div-row {
+  margin: 1cm;
+  padding: 0.5cm;
+  justify-content: center;
+}
+
+/* Styles de tarjetas de cursos */
+.card-custom {
+  overflow: hidden;
+  min-height: 450px;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+  height: 200px;
+  min-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+}
+
+.card-custom-img::after {
+  position: absolute;
+  content: "";
+  top: 161px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 40px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 545px;
+  border-left-width: calc(575px - 5vw);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: #e4f7d2;
+}
+
+.card-custom-avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  width: 5vw;
+  height: 5vw;
+}
+.sty-card {
+  overflow-y: auto;
+  background-color: #e4f7d2;
+}
+.sty-a-card{
+    text-decoration: none;
+    width: 2vw;
+    height: 6vw;
+    color: #212529;
+}
+.sty-h5{
+    color: #212529
+}
+.sty-ul{
+    border: none;
+    background-image: radial-gradient(
+      circle,
+      #ffdb6d,
+      #ffbf75,
+      #ffa78c
+    )
+}
+.sty-foo{
+    border-color: inherit;
+    background-color: #212529;
+    text-align: center;
+}
+.sty-a-foo{
+    background-color: #ffa78c
+}
