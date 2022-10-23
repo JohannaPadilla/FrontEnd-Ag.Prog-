@@ -29,6 +29,11 @@
     background-color: #e4f7d2
 }
 
+.tarj-row {
+  display: flex;
+  justify-content: center;
+}
+
 /* Styles de icono */
 .blockquote-custom {
     position: relative;
@@ -54,4 +59,24 @@
         #ffa78c
       );
       color: #212529;
+  }
+
+  /* Style iconos de edicion */
+  .div-edits {
+    display: flex;
+    justify-content: right;
+  }
+  
+  #icon-edit {
+    margin-right: 0.5vw;
+    margin-top: -2vw;
+    font-size: 0.7cm;
+    color: green;
+  }
+  
+  #icon-delete {
+    margin-right: -2vw;
+    margin-top: -2vw;
+    font-size: 0.7cm;
+    color: red;
   }

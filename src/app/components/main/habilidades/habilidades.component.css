@@ -27,3 +27,30 @@
 .sty-tarj{
     background-color: #e4f7d2
 }
+
+
+  /* Style iconos de edicion */
+.div-edits {
+  display: flex;
+  justify-content: right;
+}
+
+#icon-edit {
+  margin-right: 0.5vw;
+  margin-top: -2vw;
+  font-size: 0.7cm;
+  color: green;
+}
+
+#icon-delete {
+  margin-right: 1vw;
+  margin-top: -2vw;
+  font-size: 0.7cm;
+  color: red;
+}
+
+/* Style row */
+.tarj-row {
+  display: flex;
+  justify-content: center;
+}

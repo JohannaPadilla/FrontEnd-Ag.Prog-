@@ -72,3 +72,10 @@
   margin: 0.5cm 0;
   text-align: center
 }
+
+#icon-edit {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.7cm;
+  color: green;
+}

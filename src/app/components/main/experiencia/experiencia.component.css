@@ -45,3 +45,21 @@
   margin: 0.5vw;
   background-color: #e4f7d2;
 }
+
+/* Style iconos de edicion */
+.div-edits {
+  display: flex;
+  justify-content: right;
+}
+
+#icon-edit {
+  margin: 0.5vw;
+  font-size: 0.7cm;
+  color: green;
+}
+
+#icon-delete {
+  margin: 0.5vw;
+  font-size: 0.7cm;
+  color: red;
+}
