@@ -1,15 +1,16 @@
 <!-- Barra de navegacion -->
-<nav
-  class="navbar navbar-expand-lg fixed-top"
->
-<!-- Container de los items de la barra -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <!-- Container de los items de la barra -->
   <div class="container-fluid">
     <!-- Logo de la barra -->
     <a
       class="navbar-brand"
       href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa"
     >
-      <img src="./assets/IMG/arg.prog.png" alt="Logo Argentina Programa #Yo Programo" />
+      <img
+        src="./assets/IMG/arg.prog.png"
+        alt="Logo Argentina Programa #Yo Programo"
+      />
     </a>
     <!-- Funcion para que la barra sea responsiva y se junten los items en un solo icono -->
     <button
@@ -23,6 +24,20 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Informacion de contacto -->
+    <ul class="mb-lg-0" style="margin: 0 0.5cm">
+      <li style="color: #212529">
+        <i class="fas fa-home mr-3"></i> Manresa, Barcelona, España
+      </li>
+      <li style="color: #212529">
+        <i class="fas fa-envelope mr-3"></i>
+        padillajohannacarolina@gmail.com
+      </li>
+      <li style="color: #212529">
+        <i class="fas fa-phone mr-3"></i> + 34 637 031 002
+      </li>
+    </ul>
+
     <!-- Grupo de items principales -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -40,7 +55,7 @@
           </a>
         </li>
         <li class="nav-item dropdown" id="li-custom">
-          <a 
+          <a
             class="nav-link dropdown-toggle"
             href="#"
             id="navbarDropdown"
@@ -85,30 +100,18 @@
           </ul>
         </li>
         <li class="nav-item" id="li-custom">
-          <a
-            class="nav-link"
-            href="#"
-            tabindex="-1"
-            aria-disabled="true"
+          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
             ><i class="fa-solid fa-phone"></i> Contacto</a
           >
         </li>
       </ul>
-    <!-- Grupo de botones -->
-      <form class="d-flex">
-        <button
-          class="btn button-custom"
-          type="submit"
-        >
+      <!-- Grupo de botones -->
+      <form class="d-flex" style="margin: 0.5cm">
+        <button class="btn button-custom" type="submit">
           <strong><i class="fa-solid fa-house-user"></i> Inicio</strong>
-           
         </button>
-        <button
-          class="btn button-custom"
-          type="submit"
-        >
+        <button class="btn button-custom" type="submit">
           <strong><i class="fa-solid fa-right-to-bracket"></i> Ingresar</strong>
-           
         </button>
       </form>
     </div>

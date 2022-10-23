@@ -1,3 +1,9 @@
+/* Style de icono */
+#icono {
+  border-radius: 1vw;
+  margin: 1cm 1cm 0 1cm;
+}
+
 /* Style del section */
 #section {
   border-radius: 2vw;
@@ -14,16 +20,16 @@
 
 /* Style Div del columna "Mas informacion" */
 #div-info {
-  margin: 1cm;
+  margin: 0.2cm 1cm;
   background-color: #e4f7d2;
   padding: 0.5cm;
-  border-radius: 10px;
+  border-radius: 2vw;
 }
 /* Titulo "Mas informcion */
 #tit-info {
   text-align: center;
   text-decoration: underline;
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
 }
 /* Style de card item de columna "Mas informacion */
 .tarj-info {
