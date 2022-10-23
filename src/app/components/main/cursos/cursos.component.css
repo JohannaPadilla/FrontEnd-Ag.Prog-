@@ -94,8 +94,23 @@
 .sty-foo{
     border-color: inherit;
     background-color: #212529;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .sty-a-foo{
     background-color: #ffa78c
 }
+
+
+  /* Style iconos de edicion */
+  
+  #icon-edit {
+    font-size: 0.7cm;
+    color: green;
+  }
+  
+  #icon-delete {
+    font-size: 0.7cm;
+    color: red;
+  }

@@ -23,3 +23,28 @@
   padding: 0.5cm;
   justify-content: center;
 }
+
+  /* Style iconos de edicion */
+  .div-edits {
+    display: flex;
+    justify-content: right;
+  }
+  
+  #icon-edit {
+    margin-right: 1vw;
+    font-size: 0.7cm;
+    color: green;
+  }
+  
+  #icon-delete {
+    margin-right: 1vw;
+    font-size: 0.7cm;
+    color: red;
+  }
+
+  /* Style de row */
+  #div-row {
+    margin: 1cm;
+    padding: 0.5cm;
+    justify-content: center;
+  }
