@@ -73,9 +73,14 @@
   text-align: center
 }
 
-#icon-edit {
+.div-button {
   display: flex;
   justify-content: flex-end;
   font-size: 0.7cm;
+}
+
+.button {
   color: green;
+  border: 0;
+  background-color: transparent;
 }

@@ -18,14 +18,17 @@
 }
 
 /* Style avatar de tarjetas de experiencias laborales*/
-.card-custom-avatar img {
+.card-custom-avatar img{
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* position: absolute;
   top: 1vw;
   right: 1vw;
   width: 5vw;
-  height: 5vw;
+  height: 5vw; */
 }
 .img-fluid {
   max-width: 100%;
@@ -50,6 +53,8 @@
 .div-edits {
   display: flex;
   justify-content: right;
+  background: none;
+  border: none;
 }
 
 #icon-edit {
@@ -62,4 +67,10 @@
   margin: 0.5vw;
   font-size: 0.7cm;
   color: red;
+}
+
+.div-button {
+  display: flex;
+  justify-content: center;
+  font-size: 0.7cm;
 }

@@ -15,129 +15,30 @@
       <div class="row text-center text-white">
         <div class="col-lg-8 mx-auto">
           <h1 class="display-4">Habilidades</h1>
-          <p class="lead mb-0"></p>
+          <p class="lead mb-5"></p>
+        </div>
+        <div class="div-button" routerLink="/nuevahab" *ngIf="isLogged">
+          <button class="btn btn-dark">Ingresar Nuevo</button>
         </div>
       </div>
     </div>
 <!-- Tarjetas cursos -->
-    <div class="container">
+    <div class="container" *ngFor="let Habilidades of habi">
       <div class="row text-center tarj-row">
         <!-- inicio de tarjeta -->
         <div class="col-xl-3 col-sm-6 mb-5">
           <div class="rounded shadow-sm py-5 px-4 sty-tarj">
-            <img
-              src="./assets/IMG/ingles.jpg"
-              alt=""
-              width="100"
-              class="img-fluid rounded-pill mb-3 img-thumbnail shadow-sm"
-            />
-            <h5 class="mb-0">Ingles</h5>
-            <span class="small text-uppercase text-muted">Nivel: Basico</span>
+            <h5 class="mb-0">{{Habilidades.nombreH}}</h5>
+            <span class="small text-uppercase text-muted">{{Habilidades.nivelH}}</span>
           </div>
           <div class="row">
-            <div class="col-12 div-edits">
-              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-            </div>
-          </div>
-        </div>
-        <!-- fin de tarjeta -->
-                <!-- inicio de tarjeta -->
-        <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="rounded shadow-sm py-5 px-4 sty-tarj">
-            <img
-              src="./assets/IMG/ingles.jpg"
-              alt=""
-              width="100"
-              class="img-fluid rounded-pill mb-3 img-thumbnail shadow-sm"
-            />
-            <h5 class="mb-0">Ingles</h5>
-            <span class="small text-uppercase text-muted">Nivel: Basico</span>
-          </div>
-          <div class="row">
-            <div class="col-12 div-edits">
-              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-            </div>
-          </div>
-        </div>
-        <!-- fin de tarjeta -->
-                <!-- inicio de tarjeta -->
-        <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="rounded shadow-sm py-5 px-4 sty-tarj">
-            <img
-              src="./assets/IMG/ingles.jpg"
-              alt=""
-              width="100"
-              class="img-fluid rounded-pill mb-3 img-thumbnail shadow-sm"
-            />
-            <h5 class="mb-0">Ingles</h5>
-            <span class="small text-uppercase text-muted">Nivel: Basico</span>
-          </div>
-          <div class="row">
-            <div class="col-12 div-edits">
-              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-            </div>
-          </div>
-        </div>
-        <!-- fin de tarjeta -->
-                <!-- inicio de tarjeta -->
-        <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="rounded shadow-sm py-5 px-4 sty-tarj">
-            <img
-              src="./assets/IMG/ingles.jpg"
-              alt=""
-              width="100"
-              class="img-fluid rounded-pill mb-3 img-thumbnail shadow-sm"
-            />
-            <h5 class="mb-0">Ingles</h5>
-            <span class="small text-uppercase text-muted">Nivel: Basico</span>
-          </div>
-          <div class="row">
-            <div class="col-12 div-edits">
-              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-            </div>
-          </div>
-        </div>
-        <!-- fin de tarjeta -->
-                <!-- inicio de tarjeta -->
-        <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="rounded shadow-sm py-5 px-4 sty-tarj">
-            <img
-              src="./assets/IMG/ingles.jpg"
-              alt=""
-              width="100"
-              class="img-fluid rounded-pill mb-3 img-thumbnail shadow-sm"
-            />
-            <h5 class="mb-0">Ingles</h5>
-            <span class="small text-uppercase text-muted">Nivel: Basico</span>
-          </div>
-          <div class="row">
-            <div class="col-12 div-edits">
-              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-            </div>
-          </div>
-        </div>
-        <!-- fin de tarjeta -->
-                <!-- inicio de tarjeta -->
-        <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="rounded shadow-sm py-5 px-4 sty-tarj">
-            <img
-              src="./assets/IMG/ingles.jpg"
-              alt=""
-              width="100"
-              class="img-fluid rounded-pill mb-3 img-thumbnail shadow-sm"
-            />
-            <h5 class="mb-0">Ingles</h5>
-            <span class="small text-uppercase text-muted">Nivel: Basico</span>
-          </div>
-          <div class="row">
-            <div class="col-12 div-edits">
-              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+            <div class="col-12 div-edits" *ngIf="isLogged">
+              <button class="div-edits" routerLink="/editarhab/{{ Habilidades.id }}">
+                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
+              </button>
+                <button class="div-edits" (click)="delete(Habilidades.id)">
+                <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+              </button>
             </div>
           </div>
         </div>

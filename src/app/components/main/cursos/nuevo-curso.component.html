@@ -1,0 +1,34 @@
+<div class="container vh-100 gradient-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 btn btn-secondary">
+            <h2 class="fw-bold mb-2">Ingresa nueva experiencia</h2>
+            <p class="text-white-50 mb-5">
+              Coloque los datos en los siguentes campos
+            </p>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="institucionC">Nombre de institucion</label>
+                    <input type="text" class="form-control" id="institucionC" name="institucionC" [(ngModel)]="institucionC" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="cursoC">Nombre del curso</label>
+                    <input type="text" class="form-control" id="cursoC" name="cursoC" [(ngModel)]="cursoC" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="infoC">Descripcion</label>
+                    <input type="text" class="form-control" id="infoC" name="infoC" [(ngModel)]="infoC" required>
+                </div>
+                <!-- <div class="form-group mt-3">
+                    <label for="enlaceC">Enlace al titulo</label>
+                    <input type="text" class="form-control" id="enlaceC" name="enlaceC" [(ngModel)]="enlaceC" required>
+                </div> -->
+                <button class="btn btn-success btn-lg mt-5 mb-5">
+                    Agregar Experiencia
+                </button>
+                <button class="btn btn-primary btn-lg mt-5 mb-5 ms-5" routerLink="/" >
+                    Volver a inicio
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

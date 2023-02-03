@@ -65,6 +65,9 @@
   .div-edits {
     display: flex;
     justify-content: right;
+    align-items: center;
+    background: none;
+    border: none;
   }
   
   #icon-edit {

@@ -13,6 +13,44 @@
 <!-- Titulo de seccion "Experiencia" -->
 <section class="section">
   <div class="row" id="div-row">
+    <!-- Sector nuevo -->
+    <!-- <div class="col-lg-2">
+      <button
+        type="button"
+        class="btn btn-dark"
+        routerLink="/nuevaexp"
+        *ngIf="isLogged"
+      >
+        Nueva experiencia
+      </button>
+    </div>
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Experiencia of expe">
+            <td>{{ Experiencia.nombreE }}</td>
+            <td>{{ Experiencia.descripcionE }}</td>
+            <td>{{ Experiencia.empresaE }}</td>
+            <td *ngIf="isLogged">
+              <button
+                class="btn btn-light"
+                routerLink="/editarexp/{{ Experiencia.id }}"
+              >
+                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>Editar
+              </button>
+            </td>
+            <td *ngIf="isLogged">
+              <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                <i class="fa-solid fa-delete-left" id="icon-delete"></i>Borrar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+    <!-- Sector nuevo -->
+
     <div class="container py-5">
       <div class="row text-center text-white">
         <div class="col-lg-8 mx-auto">
@@ -26,161 +64,33 @@
       </div>
     </div>
 
+    <div class="div-button mb-4" routerLink="/nuevaexp" *ngIf="isLogged">
+      <button class="btn btn-dark">Ingresar Nuevo</button>
+    </div>
+
     <!-- Tarjetas de experiencias laborales -->
-    <div class="card div-exp">
+    <div class="card div-exp" *ngFor="let Experiencia of expe">
       <div class="row g-0">
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
         <div class="col-md-12">
           <div class="card-body">
-            <h5 class="card-title">Referente de Back Office</h5>
-            <p class="card-text">Galander Telecomunicaciones S.A</p>
+            <h5 class="card-title">{{ Experiencia.nombreE }}</h5>
+            <p class="card-text">{{ Experiencia.empresaE }}</p>
             <p class="card-text">
-              <b>Descripcion:</b> <br />
-              - Supervisar las acciones logísticas <br />
-              - Supervisar el ingreso y egreso a nivel país (Argentina) con su
-              trazabilidad analítica, realizando diferentes informes. <br />
-              - Contacto directo con proveedores logísticos, clientes como
-              Movistar Arg y Personal Arg., gerentes y CEO de la empresa. <br />
-              - Manejo y control del personal del área (10 personas). <br />
-              <b>Otras tareas:</b> Forme parte del proceso que se llevo a cabo
-              para realizar conciliación por fin del contrato con Movistar Arg.
-              Conciliando 3 años de servicio mediante análisis de datos internos
-              y externos. <br />
-              <b>Aptitudes:</b> Análisis de datos · Multitarea · Brindar
-              feedback · Comunicación · Liderazgo
+              <b>Descripcion:</b> {{ Experiencia.descripcionE }}
             </p>
-            <p class="card-text">
-              <small class="text-muted">Junio 2021 - Diciembre</small>
-            </p>
-            <div class="row">
-              <div class="col-12 div-edits">
-                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+            <div class="row" >
+              <div class="col-12 div-edits" *ngIf="isLogged">
+                <button class="div-edits" routerLink="/editarexp/{{ Experiencia.id }}">
+                  <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
+                </button>
+                  <button class="div-edits" (click)="delete(Experiencia.id)">
+                  <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+                </button>
+              </div>
             </div>
           </div>
-          </div>
         </div>
-      </div>    
+      </div>
     </div>
-  <!-- Fin experiencia -->
-      <!-- Tarjetas de experiencias laborales -->
-    <div class="card div-exp">
-      <div class="row g-0">
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
-        <div class="col-md-12">
-          <div class="card-body">
-            <h5 class="card-title">Referente de Back Office</h5>
-            <p class="card-text">Galander Telecomunicaciones S.A</p>
-            <p class="card-text">
-              <b>Descripcion:</b> <br />
-              - Supervisar las acciones logísticas <br />
-              - Supervisar el ingreso y egreso a nivel país (Argentina) con su
-              trazabilidad analítica, realizando diferentes informes. <br />
-              - Contacto directo con proveedores logísticos, clientes como
-              Movistar Arg y Personal Arg., gerentes y CEO de la empresa. <br />
-              - Manejo y control del personal del área (10 personas). <br />
-              <b>Otras tareas:</b> Forme parte del proceso que se llevo a cabo
-              para realizar conciliación por fin del contrato con Movistar Arg.
-              Conciliando 3 años de servicio mediante análisis de datos internos
-              y externos. <br />
-              <b>Aptitudes:</b> Análisis de datos · Multitarea · Brindar
-              feedback · Comunicación · Liderazgo
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Junio 2021 - Diciembre</small>
-            </p>
-            <div class="row">
-              <div class="col-12 div-edits">
-                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>    
-    </div>
-  <!-- Fin experiencia -->
-      <!-- Tarjetas de experiencias laborales -->
-    <div class="card div-exp">
-      <div class="row g-0">
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
-        <div class="col-md-12">
-          <div class="card-body">
-            <h5 class="card-title">Referente de Back Office</h5>
-            <p class="card-text">Galander Telecomunicaciones S.A</p>
-            <p class="card-text">
-              <b>Descripcion:</b> <br />
-              - Supervisar las acciones logísticas <br />
-              - Supervisar el ingreso y egreso a nivel país (Argentina) con su
-              trazabilidad analítica, realizando diferentes informes. <br />
-              - Contacto directo con proveedores logísticos, clientes como
-              Movistar Arg y Personal Arg., gerentes y CEO de la empresa. <br />
-              - Manejo y control del personal del área (10 personas). <br />
-              <b>Otras tareas:</b> Forme parte del proceso que se llevo a cabo
-              para realizar conciliación por fin del contrato con Movistar Arg.
-              Conciliando 3 años de servicio mediante análisis de datos internos
-              y externos. <br />
-              <b>Aptitudes:</b> Análisis de datos · Multitarea · Brindar
-              feedback · Comunicación · Liderazgo
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Junio 2021 - Diciembre</small>
-            </p>
-            <div class="row">
-              <div class="col-12 div-edits">
-                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>    
-    </div>
-  <!-- Fin experiencia -->
-      <!-- Tarjetas de experiencias laborales -->
-    <div class="card div-exp">
-      <div class="row g-0">
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
-        <div class="col-md-12">
-          <div class="card-body">
-            <h5 class="card-title">Referente de Back Office</h5>
-            <p class="card-text">Galander Telecomunicaciones S.A</p>
-            <p class="card-text">
-              <b>Descripcion:</b> <br />
-              - Supervisar las acciones logísticas <br />
-              - Supervisar el ingreso y egreso a nivel país (Argentina) con su
-              trazabilidad analítica, realizando diferentes informes. <br />
-              - Contacto directo con proveedores logísticos, clientes como
-              Movistar Arg y Personal Arg., gerentes y CEO de la empresa. <br />
-              - Manejo y control del personal del área (10 personas). <br />
-              <b>Otras tareas:</b> Forme parte del proceso que se llevo a cabo
-              para realizar conciliación por fin del contrato con Movistar Arg.
-              Conciliando 3 años de servicio mediante análisis de datos internos
-              y externos. <br />
-              <b>Aptitudes:</b> Análisis de datos · Multitarea · Brindar
-              feedback · Comunicación · Liderazgo
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Junio 2021 - Diciembre</small>
-            </p>
-            <div class="row">
-              <div class="col-12 div-edits">
-                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>    
-    </div>
-  <!-- Fin experiencia -->
   </div>
 </section>

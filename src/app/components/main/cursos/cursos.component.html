@@ -15,287 +15,47 @@
       <div class="row text-center text-white">
         <div class="col-lg-8 mx-auto">
           <h1 class="display-4">Cursos</h1>
-          <p class="lead mb-0">
+          <p class="lead mb-5">
             En el ultimo año tome muchos cursos y sigo estudiando para mejorar
             dia a dia.
           </p>
         </div>
-      </div>
-    </div>
-<!-- Tarjetas de cursos -->
-    <div class="col-sm-3" style="padding: 1vw">
-      <div class="card card-custom bg-white border-mio border-0">
-        <div
-          class="card-custom-img"
-          style="
-            background-image: url(./assets/IMG/py1.jpg);"
-        ></div>
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
-        <div class="card-body sty-card">
-          <h2 class="card-title">Coderhouse</h2>
-          <h3 class="card-text">Python</h3>
-          <div class="card-body">
-            <li class="nav-item dropdown" style="list-style: none">
-              <a
-                class="dropdown-toggle sty-a-card"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <h5 class="card-text ">
-                  <i class="fa-solid fa-circle-info"></i> Mas informacion
-                </h5>
-              </a>
-              <ul
-                class="dropdown-menu sty-ul"
-                aria-labelledby="navbarDropdown">
-                <li>Fecha de inicio:</li>
-                <li>Fecha de fin:</li>
-                <li>
-                  Contenido: Bases de programación en Python. Fundamentos,
-                  módulos, sintaxis y uso de reglas para crear aplicaciones.
-                  Conocimientos de Class-Based-View, login -register - accounts,
-                  CRUD y modelforms. Desarrollo de una aplicación web estilo
-                  blog en de Python en Django Framework.
-                </li>
-              </ul>
-            </li>
-          </div>
-        </div>
-        <div
-          class="card-footer sty-foo">
-          <a href="#" class="btn sty-a-foo" 
-            >Ver certificado</a
-          >
-          <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-          <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+        <div class="div-button mb-0" routerLink="/nuevocur" *ngIf="isLogged">
+          <button class="btn btn-dark">Ingresar Nuevo</button>
         </div>
       </div>
     </div>
-    <!-- fin tarjeta -->
-<!-- Tarjetas de cursos -->
-    <div class="col-sm-3" style="padding: 1vw">
-      <div class="card card-custom bg-white border-mio border-0">
-        <div
-          class="card-custom-img"
-          style="
-            background-image: url(./assets/IMG/py1.jpg);"
-        ></div>
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
-        <div class="card-body sty-card">
-          <h2 class="card-title">Coderhouse</h2>
-          <h3 class="card-text">Python</h3>
-          <div class="card-body">
-            <li class="nav-item dropdown" style="list-style: none">
-              <a
-                class="dropdown-toggle sty-a-card"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <h5 class="card-text ">
-                  <i class="fa-solid fa-circle-info"></i> Mas informacion
-                </h5>
-              </a>
-              <ul
-                class="dropdown-menu sty-ul"
-                aria-labelledby="navbarDropdown">
-                <li>Fecha de inicio:</li>
-                <li>Fecha de fin:</li>
-                <li>
-                  Contenido: Bases de programación en Python. Fundamentos,
-                  módulos, sintaxis y uso de reglas para crear aplicaciones.
-                  Conocimientos de Class-Based-View, login -register - accounts,
-                  CRUD y modelforms. Desarrollo de una aplicación web estilo
-                  blog en de Python en Django Framework.
-                </li>
-              </ul>
-            </li>
-          </div>
-        </div>
-        <div
-          class="card-footer sty-foo">
-          <a href="#" class="btn sty-a-foo" 
-            >Ver certificado</a
-          >
-          <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-          <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-        </div>
-      </div>
-    </div>
-    <!-- fin tarjeta -->
+
     <!-- Tarjetas de cursos -->
-    <div class="col-sm-3" style="padding: 1vw">
+    <div class="col-sm-3 mt-0" style="padding: 1vw" *ngFor="let Cursos of curs">
       <div class="card card-custom bg-white border-mio border-0">
-        <div
-          class="card-custom-img"
-          style="
-            background-image: url(./assets/IMG/py1.jpg);"
-        ></div>
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
         <div class="card-body sty-card">
-          <h2 class="card-title">Coderhouse</h2>
-          <h3 class="card-text">Python</h3>
+          <h2 class="card-title">{{ Cursos.institucionC }}</h2>
+          <h3 class="card-text">{{ Cursos.cursoC }}</h3>
           <div class="card-body">
-            <li class="nav-item dropdown" style="list-style: none">
-              <a
-                class="dropdown-toggle sty-a-card"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <h5 class="card-text ">
-                  <i class="fa-solid fa-circle-info"></i> Mas informacion
-                </h5>
-              </a>
-              <ul
-                class="dropdown-menu sty-ul"
-                aria-labelledby="navbarDropdown">
-                <li>Fecha de inicio:</li>
-                <li>Fecha de fin:</li>
-                <li>
-                  Contenido: Bases de programación en Python. Fundamentos,
-                  módulos, sintaxis y uso de reglas para crear aplicaciones.
-                  Conocimientos de Class-Based-View, login -register - accounts,
-                  CRUD y modelforms. Desarrollo de una aplicación web estilo
-                  blog en de Python en Django Framework.
-                </li>
-              </ul>
-            </li>
+            <h5 class="card-text">
+              <i class="fa-solid fa-circle-info"></i> Detalles del curso
+            </h5>
+            <div>
+              {{ Cursos.infoC }}
+            </div>
           </div>
         </div>
-        <div
-          class="card-footer sty-foo">
-          <a href="#" class="btn sty-a-foo" 
+        <div class="card-footer sty-foo">
+          <!-- <a href="{{ Cursos.enlaceC }}" class="btn sty-a-foo"
             >Ver certificado</a
-          >
-          <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-          <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+          > -->
+          <div class="col-4 div-edits" *ngIf="isLogged">
+            <button class="div-edits" routerLink="/editarcur/{{ Cursos.id }}">
+              <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
+            </button>
+              <button class="div-edits" (click)="delete(Cursos.id)">
+              <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
     <!-- fin tarjeta -->
-    <!-- Tarjetas de cursos -->
-    <div class="col-sm-3" style="padding: 1vw">
-      <div class="card card-custom bg-white border-mio border-0">
-        <div
-          class="card-custom-img"
-          style="
-            background-image: url(./assets/IMG/py1.jpg);"
-        ></div>
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
-        <div class="card-body sty-card">
-          <h2 class="card-title">Coderhouse</h2>
-          <h3 class="card-text">Python</h3>
-          <div class="card-body">
-            <li class="nav-item dropdown" style="list-style: none">
-              <a
-                class="dropdown-toggle sty-a-card"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <h5 class="card-text ">
-                  <i class="fa-solid fa-circle-info"></i> Mas informacion
-                </h5>
-              </a>
-              <ul
-                class="dropdown-menu sty-ul"
-                aria-labelledby="navbarDropdown">
-                <li>Fecha de inicio:</li>
-                <li>Fecha de fin:</li>
-                <li>
-                  Contenido: Bases de programación en Python. Fundamentos,
-                  módulos, sintaxis y uso de reglas para crear aplicaciones.
-                  Conocimientos de Class-Based-View, login -register - accounts,
-                  CRUD y modelforms. Desarrollo de una aplicación web estilo
-                  blog en de Python en Django Framework.
-                </li>
-              </ul>
-            </li>
-          </div>
-        </div>
-        <div
-          class="card-footer sty-foo">
-          <a href="#" class="btn sty-a-foo" 
-            >Ver certificado</a
-          >
-          <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-          <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-        </div>
-      </div>
-    </div>
-    <!-- fin tarjeta -->
-    <!-- Tarjetas de cursos -->
-    <div class="col-sm-3" style="padding: 1vw">
-      <div class="card card-custom bg-white border-mio border-0">
-        <div
-          class="card-custom-img"
-          style="
-            background-image: url(./assets/IMG/py1.jpg);"
-        ></div>
-        <div class="card-custom-avatar">
-          <img class="img-fluid" src="./assets/IMG/coder.png" alt="Avatar" />
-        </div>
-        <div class="card-body sty-card">
-          <h2 class="card-title">Coderhouse</h2>
-          <h3 class="card-text">Python</h3>
-          <div class="card-body">
-            <li class="nav-item dropdown" style="list-style: none">
-              <a
-                class="dropdown-toggle sty-a-card"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <h5 class="card-text ">
-                  <i class="fa-solid fa-circle-info"></i> Mas informacion
-                </h5>
-              </a>
-              <ul
-                class="dropdown-menu sty-ul"
-                aria-labelledby="navbarDropdown">
-                <li>Fecha de inicio:</li>
-                <li>Fecha de fin:</li>
-                <li>
-                  Contenido: Bases de programación en Python. Fundamentos,
-                  módulos, sintaxis y uso de reglas para crear aplicaciones.
-                  Conocimientos de Class-Based-View, login -register - accounts,
-                  CRUD y modelforms. Desarrollo de una aplicación web estilo
-                  blog en de Python en Django Framework.
-                </li>
-              </ul>
-            </li>
-          </div>
-        </div>
-        <div
-          class="card-footer sty-foo">
-          <a href="#" class="btn sty-a-foo" 
-            >Ver certificado</a
-          >
-          <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-          <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-        </div>
-      </div>
-    </div>
-    <!-- fin tarjeta -->    
   </div>
 </section>

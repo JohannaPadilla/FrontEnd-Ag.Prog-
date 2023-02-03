@@ -115,15 +115,18 @@
         </a>
       </div>
       <form>
-        <button class="btn button-custom" type="submit">
+        <button class="btn button-custom" type="button" (click)="login()" *ngIf="!isLogged">
           <strong><i class="fa-solid fa-right-to-bracket"></i> Ingresar</strong>
         </button>
-        <button class="btn button-custom" type="submit">
-          <strong><i class="fa-solid fa-user-pen"></i> Perfil</strong>
+        <button class="btn button-custom" type="button" (click)="onLogOut()" *ngIf="isLogged">
+          <strong><i class="fa-solid fa-right-to-bracket"></i> Cerrar sesion</strong>
         </button>
-        <button class="btn button-custom" type="submit">
+        <button class="btn button-custom" type="submit" *ngIf="isLogged" routerLink="/editarper/1">
+          <strong><i class="fa-solid fa-user-pen"></i>Editar perfil</strong>
+        </button>
+        <!-- <button class="btn button-custom" type="submit">
           <strong><i class="fa-solid fa-user-pen"></i> Salir</strong>
-        </button>
+        </button> -->
       </form>
     </div>
   </div>

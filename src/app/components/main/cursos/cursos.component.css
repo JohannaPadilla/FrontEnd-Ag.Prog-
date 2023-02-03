@@ -114,3 +114,9 @@
     font-size: 0.7cm;
     color: red;
   }
+  .div-edits{
+    display: flex;
+    justify-content: space-evenly;
+    background: none;
+    border: none;
+  }

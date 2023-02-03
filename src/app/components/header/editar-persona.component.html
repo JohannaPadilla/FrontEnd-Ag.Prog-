@@ -1,0 +1,34 @@
+<div class="container vh-100 gradient-custom" *ngIf="pers">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 btn btn-secondary">
+            <h2 class="fw-bold mb-2">Editar perfil</h2>
+            <p class="text-white-50 mb-5">
+              Coloque los nuevos datos
+            </p>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="pers.nombre" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="pers.apellido" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="img">Imagen</label>
+                    <input type="file" class="form-control" id="img" name="img" required (change)="uploadImage($event)" accept=".jpg, .jpge, .png">
+                </div>
+                <div class="imagen mt-5">
+                    <img [src]="imageService.url" width="200px">
+                </div>
+
+                <button class="btn btn-success btn-lg mt-5 mb-5" >
+                    Actualizar perfil
+                </button>
+                <button class="btn btn-primary btn-lg mt-5 mb-5 ms-5" routerLink="/" >
+                    Volver a inicio
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

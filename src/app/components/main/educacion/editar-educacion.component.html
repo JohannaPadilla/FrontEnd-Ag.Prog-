@@ -1,0 +1,26 @@
+<div class="container vh-100 gradient-custom" *ngIf="educ">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 btn btn-secondary">
+            <h2 class="fw-bold mb-2">Editar experiencia</h2>
+            <p class="text-white-50 mb-5">
+              Coloque los nuevos datos
+            </p>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="tituloEd">Titulo obtenido</label>
+                    <input type="text" class="form-control" id="tituloEd" name="tituloEd" [(ngModel)]="educ.tituloEd" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="nombreEd">Instuticion y estado del titulo (Ej: En curso)</label>
+                    <input type="text" class="form-control" id="nombreEd" name="nombreEd" [(ngModel)]="educ.nombreEd" required>
+                </div>
+                <button class="btn btn-success btn-lg mt-5 mb-5" >
+                    Actualizar Educacion
+                </button>
+                <button class="btn btn-primary btn-lg mt-5 mb-5 ms-5" routerLink="/" >
+                    Volver a inicio
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -28,6 +28,8 @@
   .div-edits {
     display: flex;
     justify-content: right;
+    background: none;
+    border: none;
   }
   
   #icon-edit {

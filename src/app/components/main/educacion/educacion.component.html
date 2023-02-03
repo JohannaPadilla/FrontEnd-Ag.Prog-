@@ -15,92 +15,45 @@
     <div class="container py-5">
       <div class="row text-center text-white">
         <div class="col-lg-8 mx-auto">
-          <h1 class="display-4">Educacion</h1>
+          <h1 class="display-4 mb-5">Educacion</h1>
           <p class="lead mb-0"></p>
+        </div>
+        <div class="div-button" routerLink="/nuevaedu" *ngIf="isLogged">
+          <button class="btn btn-dark">Ingresar Nuevo</button>
         </div>
       </div>
     </div>
+
     <!-- Tarjetas de educacion -->
     <div class="container">
       <div class="row tarj-row">
         <!-- inicio tarjeta de educacion -->
-        <div class="col-lg-6">
+        <div class="col-lg-6" *ngFor="let Educacion of educ">
           <blockquote
             class="blockquote blockquote-custom p-5 shadow rounded tarj-back"
           >
             <div class="row">
-              <div class="col-12 div-edits">
-                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-                <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+              <div class="col-12 div-edits" *ngIf="isLogged">
+                <button class="div-edits" routerLink="/editareduc/{{ Educacion.id }}">
+                  <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
+                </button>
+                  <button class="div-edits" (click)="delete(Educacion.id)">
+                  <i class="fa-solid fa-delete-left" id="icon-delete"></i>
+                </button>
               </div>
             </div>
-              <div class="blockquote-custom-icon shadow-sm">
-                <i class="fa fa-quote-left"></i>
-              </div>
-              <p class="mb-0 mt-2 font-italic">
-                Perito Mercantil con orientacion contablea>."
-              </p>
-              <footer class="blockquote-footer pt-4 mt-4 border-top">
-                Escuela media Nª14 Tomas Espora -
-                <cite title="Source Title"
-                  >Secundario completo (Bachillerato)</cite
-                >
-              </footer>
+            <div class="blockquote-custom-icon shadow-sm">
+              <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="mb-0 mt-2 font-italic">
+              {{Educacion.nombreEd}}
+            </p>
+            <footer class="blockquote-footer pt-4 mt-4 border-top">
+              {{Educacion.tituloEd}}
+            </footer>
           </blockquote>
         </div>
         <!-- fin tarjeta -->
-        <!-- inicio tarjeta de educacion -->
-        <div class="col-lg-6">
-          <blockquote
-            class="blockquote blockquote-custom p-5 shadow rounded tarj-back"
-          >
-            <div class="row">
-              <div class="col-12 div-edits">
-                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-                <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-              </div>
-            </div>
-              <div class="blockquote-custom-icon shadow-sm">
-                <i class="fa fa-quote-left"></i>
-              </div>
-              <p class="mb-0 mt-2 font-italic">
-                Perito Mercantil con orientacion contablea>."
-              </p>
-              <footer class="blockquote-footer pt-4 mt-4 border-top">
-                Escuela media Nª14 Tomas Espora -
-                <cite title="Source Title"
-                  >Secundario completo (Bachillerato)</cite
-                >
-              </footer>
-          </blockquote>
-        </div>
-        <!-- fin tarjeta -->
-        <!-- inicio tarjeta de educacion -->
-        <div class="col-lg-6">
-          <blockquote
-            class="blockquote blockquote-custom p-5 shadow rounded tarj-back"
-          >
-            <div class="row">
-              <div class="col-12 div-edits">
-                <i class="fa-solid fa-pen-to-square" id="icon-edit"></i>
-                <i class="fa-solid fa-delete-left" id="icon-delete"></i>
-              </div>
-            </div>
-              <div class="blockquote-custom-icon shadow-sm">
-                <i class="fa fa-quote-left"></i>
-              </div>
-              <p class="mb-0 mt-2 font-italic">
-                Perito Mercantil con orientacion contablea>."
-              </p>
-              <footer class="blockquote-footer pt-4 mt-4 border-top">
-                Escuela media Nª14 Tomas Espora -
-                <cite title="Source Title"
-                  >Secundario completo (Bachillerato)</cite
-                >
-              </footer>
-          </blockquote>
-        </div>
-        <!-- fin tarjeta -->                    
       </div>
     </div>
   </div>
