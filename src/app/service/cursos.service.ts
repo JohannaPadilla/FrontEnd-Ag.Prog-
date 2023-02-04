@@ -7,7 +7,7 @@ import { Cursos } from '../model/cursos';
   providedIn: 'root'
 })
 export class CursosService {
-  curURL = 'http://localhost:8080/curs/'
+  curURL = 'https://backendjcp.onrender.com/curs/'
 
   constructor(private httpClient: HttpClient) { }
 

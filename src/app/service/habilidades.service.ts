@@ -7,7 +7,7 @@ import { Habilidades } from '../model/habilidades';
   providedIn: 'root'
 })
 export class HabilidadesService {
-  habURL = 'http://localhost:8080/habi/'
+  habURL = 'https://backendjcp.onrender.com/habi/'
 
   constructor(private httpClient: HttpClient) { }
 

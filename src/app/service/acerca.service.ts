@@ -7,7 +7,7 @@ import { Acerca } from '../model/acerca';
   providedIn: 'root'
 })
 export class AcercaService {
-  aceURL = 'http://localhost:8080/aceinf/'
+  aceURL = 'https://backendjcp.onrender.com/aceinf/'
 
   constructor(private httpClient: HttpClient) { }
 

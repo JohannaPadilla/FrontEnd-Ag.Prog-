@@ -1,18 +1,11 @@
 <div class="container vh-100 gradient-custom" *ngIf="aceInf">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-12 col-md-8 col-lg-6 btn btn-secondary">
-      <h2 class="fw-bold mb-2">Editar acerca de mi</h2>
       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
         <div class="form-group">
-          <label for="infoA">Informacion</label>
-          <!-- <input
-            type="text"
-            class="form-control"
-            id="infoA"
-            name="infoA"
-            [(ngModel)]="aceInf.infoA"
-            required
-          /> -->
+          <label for="infoA">
+            <h2 class="fw-bold mb-2">Editar acerca de mi</h2>
+          </label>
           <textarea
             class="form-control"
             name="infoA"

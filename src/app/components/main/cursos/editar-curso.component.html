@@ -1,7 +1,7 @@
 <div class="container vh-100 gradient-custom" *ngIf="curs">
     <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 btn btn-secondary">
-            <h2 class="fw-bold mb-2">Editar experiencia</h2>
+            <h2 class="fw-bold mb-2">Editar curso</h2>
             <p class="text-white-50 mb-5">
               Coloque los nuevos datos
             </p>
@@ -18,12 +18,8 @@
                     <label for="infoC">Descripcion</label>
                     <input type="text" class="form-control" id="infoC" name="infoC" [(ngModel)]="curs.infoC" required>
                 </div>
-                <!-- <div class="form-group mt-3">
-                    <label for="enlaceC">Enlace del titulo</label>
-                    <input type="text" class="form-control" id="enlaceC" name="enlaceC" [(ngModel)]="curs.enlaceC" required>
-                </div> -->
                 <button class="btn btn-success btn-lg mt-5 mb-5" >
-                    Actualizar Experiencia
+                    Actualizar curso
                 </button>
                 <button class="btn btn-primary btn-lg mt-5 mb-5 ms-5" routerLink="/" >
                     Volver a inicio
